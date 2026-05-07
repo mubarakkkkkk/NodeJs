@@ -1,0 +1,16 @@
+20260507	11:53:11	efc5ac2b-0f3a-496a-b616-5862f1b798e4	GET	undefined	/index.html
+20260507	11:53:11	1e1e0702-323d-4e59-ab60-39c3f02109aa	GET	undefined	/css/style.css
+20260507	12:17:14	328c8fc9-1e2f-4334-afe7-54085a474fe7	GET	undefined	/index.html
+20260507	12:17:14	123af53e-8c30-45d4-87cd-d565817bc84c	GET	undefined	/css/style.css
+20260507	12:19:26	870f0e3a-1b8e-4cd2-aee2-fa2d3d854fb4	GET	https://www.google.com	/
+20260507	12:25:40	e995c6b5-79dd-4989-bebf-dbbd2b8c3ada	GET	https://www.google.com	/
+20260507	12:27:24	f9052da1-ae05-444d-9f76-3669437ccac9	GET	https://www.google.com	/
+20260507	12:29:20	b4802756-39cf-4ccf-8530-c5c8fe5ee34a	GET	https://www.google.com	/
+20260507	12:56:11	670caba9-b898-4187-9706-46250ac4d26a	GET	https://www.google.com	/
+20260507	12:56:53	48810db0-75c5-4ca6-ac41-47e3194d8a81	GET	https://www.google.com	/
+20260507	13:03:06	2cad7818-b150-47a4-91bc-72526d437fb0	GET	undefined	/index.html
+20260507	13:03:58	868a8c04-930f-4638-a151-3f40931097fb	GET	undefined	/index.html
+20260507	13:04:25	9fc774a6-7b48-4d92-ace3-65f07a13ea9c	GET	undefined	/index.html
+20260507	13:04:42	5ceb4479-f522-4778-8c06-76eca3c9ca80	GET	undefined	/index.html
+20260507	13:06:18	23d395ee-27d4-41b7-9204-379e6fcb7415	GET	undefined	/index.html
+20260507	13:20:41	3b69c84d-6c2e-4770-a58d-00a682588154	GET	undefined	/index.html
