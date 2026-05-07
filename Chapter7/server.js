@@ -5,6 +5,7 @@ const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler')
 const cors = require('cors')
 const { request } = require('http');
+const { error } = require('console');
 const PORT = process.env.PORT || 3500;
 
 app.use(logger);
@@ -12,7 +13,7 @@ app.use(logger);
 const whitelist = ['https://www.google.com', 'http://127.0.0.1:5500', 'http://localhost:3500'];
 const corsOption = {
     origin: (origin, callback) => {
-        if(whitelist.indexOf(origin) !== -1 ){
+        if(whitelist.indexOf(origin) !== -1 || !origin){
             callback(null, true)
         } else {
             callback(new Error('Not allowed by CORS'))
@@ -29,7 +30,7 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
     //res.sendFile('./views/index.html', {root: __dirname});
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
@@ -69,8 +70,16 @@ const three = (req, res) => {
 
 app.get('/chain.html', [one, two, three]);
 
-app.get('/{*path}', (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+app.all('/{*path}', (req, res) => {
+    res.status(404);
+    if(req.accepts('html')){
+        res.sendFile(path.join(__dirname, 'views', '404.html'));
+    } else if (req.accepts('json')){
+        res.json({error: '404 Not found'});
+    } else {
+        res.type('txt').send('404 not found');
+    }
+    
 });
 
 app.use(errorHandler)
